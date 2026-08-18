@@ -4,7 +4,7 @@ import numpy as np
 from scipy import stats
 
 
-__all__ = ["spi"]
+__all__ = ["spi", "ssi", "streamflow_index"]
 
 
 def _accumulate(values: np.ndarray, scale: int) -> np.ndarray:
