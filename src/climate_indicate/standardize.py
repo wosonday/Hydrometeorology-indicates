@@ -14,3 +14,10 @@ from scipy import stats
 from climate_indicate.distributions import Distribution
 
 __all__ = ["standardize"]
+
+
+def _pad_to_multiple(values: np.ndarray, mutiple: int) -> np.ndarray:
+    """
+    add NaN in the end of array to can divisible by `mutiple`,
+    Allows reshape into matrix (year, period/year) without cutting data
+    """
